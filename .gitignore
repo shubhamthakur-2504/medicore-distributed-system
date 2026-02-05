@@ -1,0 +1,52 @@
+# --- Compiled Class Files ---
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- Build Folders ---
+target/
+bin/
+out/
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iws
+*.iml
+*.ipr
+/out/
+.idea/workspace.xml
+.idea/shelf/
+
+# --- VS Code ---
+.vscode/
+.history/
+*.code-workspace
+
+# --- Maven Wrapper ---
+.mvn/
+mvnw
+mvnw.cmd
+
+# --- Operating System Files ---
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Environment & Sensitive Data ---
+# Crucial if you start using cloud DBs
+.env
+.env.local
+application-prod.properties
