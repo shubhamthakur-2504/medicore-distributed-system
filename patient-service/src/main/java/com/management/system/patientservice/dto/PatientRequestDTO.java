@@ -3,6 +3,7 @@ package com.management.system.patientservice.dto;
 import com.management.system.patientservice.model.Gender;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 
@@ -17,7 +18,7 @@ public class PatientRequestDTO {
     @Email(message = "Invalid email format")
     private String email;
 
-    @NotBlank(message = "Gender is required")
+    @NotNull(message = "Gender is required")
     private Gender gender;
 
     @NotBlank(message = "Address is required")
@@ -45,7 +46,7 @@ public class PatientRequestDTO {
         this.email = email;
     }
 
-    public @NotBlank(message = "Gender is required") Gender getGender() {
+    public @NotNull(message = "Gender is required") Gender getGender() {
         return gender;
     }
 

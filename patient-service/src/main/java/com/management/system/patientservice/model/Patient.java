@@ -3,6 +3,7 @@ package com.management.system.patientservice.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.EnumNaming;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -20,6 +21,10 @@ public class Patient {
     @Email
     @Column(unique = true)
     private String email;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
     @NotNull
     private String address;
@@ -48,6 +53,14 @@ public class Patient {
 
     public void setEmail(@NotNull @Email String email) {
         this.email = email;
+    }
+
+    public @NotNull Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(@NotNull Gender gender) {
+        this.gender = gender;
     }
 
     public @NotNull String getAddress() {
