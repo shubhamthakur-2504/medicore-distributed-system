@@ -58,4 +58,11 @@ public class PatientsService {
         patientRepository.deleteById(id);
     }
 
+    public boolean exists(String patientId) {
+        try {
+            return patientRepository.existsById(UUID.fromString(patientId.trim()));
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
+    }
 }
