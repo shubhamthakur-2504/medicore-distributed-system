@@ -1,0 +1,17 @@
+syntax = "proto3";
+package patient;
+
+option java_multiple_files = true;
+option java_package= "patient";
+
+service PatientService{
+  rpc verifyPatient (PatientLookupRequest) returns (PatientLookupResponse);
+}
+
+message PatientLookupRequest {
+  string patientId = 1;
+}
+
+message PatientLookupResponse {
+  bool exists = 1;
+}
